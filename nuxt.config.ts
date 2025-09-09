@@ -8,6 +8,14 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    server: {
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        '.netlify.app',
+        'devserver-preview--movintagewatches.netlify.app' // if your preview subdomain is different, put that exact one here
+      ]
+    }
   },
   experimental: { appManifest: false },
   modules: ["nuxt-icon", "@nuxt/image"],
